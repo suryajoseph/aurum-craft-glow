@@ -39,42 +39,55 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden -mt-20 pt-32 md:pt-36 pb-20 md:pb-28">
-        <div className="absolute inset-0">
+      <section className="relative min-h-screen flex flex-col overflow-hidden -mt-20 bg-background">
+        <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
             alt="Master goldsmith working at the bench"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-40"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
-        <div className="container-prose relative z-10">
-          <div className="max-w-2xl animate-fade-up">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="h-px w-12 bg-primary/70" />
-              <span className="text-[11px] uppercase tracking-[0.32em] text-primary">
+        <div
+          aria-hidden
+          className="absolute bottom-0 right-0 w-[28rem] h-[28rem] rounded-full pointer-events-none"
+          style={{
+            background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)",
+            opacity: 0.08,
+            filter: "blur(80px)",
+          }}
+        />
+        <div className="h-20 w-full shrink-0" />
+        <div className="relative z-10 flex-1 flex">
+          <div className="container-prose w-full flex flex-col justify-center pt-8 pb-16 md:pb-24 animate-fade-up">
+            <div className="flex items-center gap-3 mb-6 md:mb-8">
+              <span className="h-px w-12 md:w-16 bg-primary/60" />
+              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-primary font-semibold">
                 Established {company.established}
               </span>
             </div>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] text-balance">
-              Where metallurgy becomes <em className="italic gold-gradient-text">legacy</em>
+            <h1 className="font-display font-light text-foreground tracking-tight leading-[0.9] text-[clamp(3.25rem,11vw,9rem)]">
+              <span className="block">Where</span>
+              <span className="block">metallurgy</span>
+              <span className="block">becomes</span>
+              <span className="block italic gold-gradient-text">legacy</span>
             </h1>
-            <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-8 md:mt-10 max-w-md md:max-w-lg text-sm md:text-base text-muted-foreground leading-relaxed font-light">
               {company.description}
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md sm:max-w-none">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] hover:bg-[var(--gold-soft)] transition-colors"
+                className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-[11px] font-bold uppercase tracking-[0.22em] hover:bg-[var(--gold-soft)] transition-colors"
               >
                 <span className="size-1.5 rounded-full bg-primary-foreground" />
                 Begin a Commission
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-3 px-7 py-4 border border-foreground/15 text-[11px] font-semibold uppercase tracking-[0.22em] hover:border-primary hover:text-primary transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-foreground/20 text-foreground text-[11px] font-semibold uppercase tracking-[0.22em] hover:border-primary hover:text-primary transition-colors"
               >
                 View Portfolio <ArrowUpRight size={14} />
               </Link>
