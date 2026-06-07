@@ -39,7 +39,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[92vh] min-h-[640px] flex items-end overflow-hidden -mt-20 pt-20">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden -mt-20 pt-32 md:pt-36 pb-20 md:pb-28">
         <div className="absolute inset-0">
           <img
             src={heroImage}
@@ -50,7 +50,7 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/30 to-transparent" />
         </div>
-        <div className="container-prose relative z-10 pb-20 md:pb-28">
+        <div className="container-prose relative z-10">
           <div className="max-w-2xl animate-fade-up">
             <div className="flex items-center gap-4 mb-6">
               <span className="h-px w-12 bg-primary/70" />
