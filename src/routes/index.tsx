@@ -68,16 +68,16 @@ function Home() {
                 Established {company.established}
               </span>
             </div>
-            <h1 className="font-display font-light text-foreground tracking-tight leading-[0.9] text-[clamp(3.25rem,11vw,9rem)]">
+            <h1 className="font-display font-light text-foreground tracking-tight leading-[0.95] text-[clamp(2.5rem,7vw,6rem)] max-w-[18ch]">
               <span className="block">Where</span>
               <span className="block">metallurgy</span>
               <span className="block">becomes</span>
               <span className="block italic gold-gradient-text">legacy</span>
             </h1>
-            <p className="mt-8 md:mt-10 max-w-md md:max-w-lg text-sm md:text-base text-muted-foreground leading-relaxed font-light">
+            <p className="mt-6 md:mt-8 max-w-md md:max-w-lg text-sm md:text-base text-muted-foreground leading-relaxed font-light">
               {company.description}
             </p>
-            <div className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md sm:max-w-none">
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md sm:max-w-none">
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-[11px] font-bold uppercase tracking-[0.22em] hover:bg-[var(--gold-soft)] transition-colors"
