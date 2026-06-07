@@ -39,7 +39,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden -mt-20 bg-background">
+      <section className="relative min-h-[88svh] flex flex-col overflow-hidden -mt-20 bg-background">
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
@@ -61,33 +61,33 @@ function Home() {
         />
         <div className="h-20 w-full shrink-0" />
         <div className="relative z-10 flex-1 flex">
-          <div className="container-prose w-full flex flex-col justify-center pt-6 pb-12 md:pb-18 animate-fade-up">
+          <div className="container-prose w-full flex flex-col justify-center pt-4 pb-10 md:pb-16 animate-fade-up">
             <div className="flex items-center gap-3 mb-4 md:mb-6">
               <span className="h-px w-10 md:w-14 bg-primary/60" />
               <span className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-primary font-semibold">
                 Established {company.established}
               </span>
             </div>
-            <h1 className="font-display font-light text-foreground tracking-tight leading-[0.98] text-[clamp(2.2rem,5.4vw,4.75rem)] max-w-[16ch]">
+            <h1 className="font-display font-light text-foreground tracking-tight leading-[1.02] text-[clamp(1.85rem,4.6vw,4rem)] max-w-[15ch]">
               <span className="block">Where</span>
               <span className="block">metallurgy</span>
               <span className="block">becomes</span>
               <span className="block italic gold-gradient-text">legacy</span>
             </h1>
-            <p className="mt-5 md:mt-6 max-w-sm md:max-w-md text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed font-light">
+            <p className="mt-4 md:mt-5 max-w-[19rem] md:max-w-sm text-[13px] md:text-sm text-muted-foreground leading-relaxed font-light">
               {company.description}
             </p>
-            <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-sm sm:max-w-none">
+            <div className="mt-5 md:mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-[19rem] sm:max-w-none">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--gold-soft)] transition-colors"
+                className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] hover:bg-[var(--gold-soft)] transition-colors"
               >
                 <span className="size-1.5 rounded-full bg-primary-foreground" />
                 Begin a Commission
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-foreground/20 text-foreground text-[10px] font-semibold uppercase tracking-[0.2em] hover:border-primary hover:text-primary transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-foreground/20 text-foreground text-[10px] font-semibold uppercase tracking-[0.18em] hover:border-primary hover:text-primary transition-colors"
               >
                 View Portfolio <ArrowUpRight size={14} />
               </Link>
