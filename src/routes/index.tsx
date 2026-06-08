@@ -69,10 +69,10 @@ function Home() {
               </span>
             </div>
             <h1 className="font-display font-light text-foreground tracking-tight leading-[1.02] text-[clamp(1.85rem,4.6vw,4rem)] max-w-[15ch]">
-              <span className="block">Where</span>
-              <span className="block">metallurgy</span>
-              <span className="block">becomes</span>
-              <span className="block italic gold-gradient-text">legacy</span>
+              <span className="block">Quality</span>
+              <span className="block">jewellery,</span>
+              <span className="block">made just</span>
+              <span className="block italic gold-gradient-text">for you.</span>
             </h1>
             <p className="mt-4 md:mt-5 max-w-[19rem] md:max-w-sm text-[13px] md:text-sm text-muted-foreground leading-relaxed font-light">
               {company.description}
@@ -83,32 +83,31 @@ function Home() {
                 className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] hover:bg-[var(--gold-soft)] transition-colors"
               >
                 <span className="size-1.5 rounded-full bg-primary-foreground" />
-                Begin a Commission
+                Get a Quote
               </Link>
               <Link
                 to="/portfolio"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-foreground/20 text-foreground text-[10px] font-semibold uppercase tracking-[0.18em] hover:border-primary hover:text-primary transition-colors"
               >
-                View Portfolio <ArrowUpRight size={14} />
+                See Our Work <ArrowUpRight size={14} />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* INTRO + STATS */}
       <section className="py-24 md:py-32 border-b border-border/40">
         <div className="container-prose grid lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-7">
             <SectionHeading
-              eyebrow={`${company.yearsExperience}+ years of mastery`}
+              eyebrow={`${company.yearsExperience}+ years in business`}
               title={
                 <>
-                  Thirty years of <em className="italic font-light">precision</em>
-                  <br /> at your service.
+                  Two decades of <em className="italic font-light">honest</em>
+                  <br /> jewellery making.
                 </>
               }
-              description="Based in the heart of the heritage jewellery district, our workshop combines traditional bench technique with advanced CAD/CAM engineering — at scale, without compromise."
+              description="A family-run workshop making gold and silver jewellery for shops, designers, and walk-in customers. Simple, careful work at a fair price."
             />
             <Link
               to="/about"
@@ -134,8 +133,8 @@ function Home() {
       <section className="py-24 md:py-32 bg-card">
         <div className="container-prose">
           <SectionHeading
-            eyebrow="Why Aurum"
-            title="Quiet luxury. Audited rigour."
+            eyebrow="Why choose us"
+            title="Simple, honest jewellery making."
           />
           <div className="mt-16 grid md:grid-cols-2 gap-px bg-border">
             {company.whyChooseUs.map((item, i) => (
@@ -199,11 +198,11 @@ function Home() {
               eyebrow="Workflow"
               title={
                 <>
-                  The path from <em className="italic font-light">concept</em>
-                  <br /> to carbon.
+                  From your idea to the <em className="italic font-light">finished</em>
+                  <br /> piece.
                 </>
               }
-              description="Seven measured stages. Each one signed off before we move forward."
+              description="A few simple steps. We keep you updated at every stage."
             />
             <Link
               to="/process"
@@ -234,7 +233,7 @@ function Home() {
       <section className="py-24 md:py-32">
         <div className="container-prose">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
-            <SectionHeading eyebrow="Recent Works" title="Excellence in execution." />
+          <SectionHeading eyebrow="Recent work" title="A few pieces we've made." />
             <Link
               to="/portfolio"
               className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground border-b border-border pb-1 hover:text-primary hover:border-primary transition-colors w-fit"
@@ -256,8 +255,8 @@ function Home() {
         <div className="container-prose">
           <SectionHeading
             align="center"
-            eyebrow="Voices"
-            title="Trusted by the houses you trust."
+            eyebrow="Customer reviews"
+            title="What our customers say."
           />
           <div className="mt-16 grid md:grid-cols-3 gap-px bg-border">
             {featuredTestimonials.map((t) => (
@@ -298,18 +297,17 @@ function Home() {
         />
         <div className="container-prose relative text-center">
           <h2 className="font-display text-5xl md:text-7xl text-balance max-w-3xl mx-auto leading-[1.05]">
-            Let's create something <em className="italic gold-gradient-text">extraordinary</em>.
+            Have something in <em className="italic gold-gradient-text">mind?</em>
           </h2>
           <p className="mt-6 text-base text-muted-foreground max-w-xl mx-auto">
-            From a single commission to a global collection — speak with a master technician about
-            your next project.
+            Send us a photo, a sketch, or just an idea. We'll get back to you with a clear quote.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
               className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em]"
             >
-              Send an Enquiry
+              Contact Us
             </Link>
             <a
               href={company.contact.whatsappLink}
